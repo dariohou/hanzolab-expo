@@ -1,26 +1,12 @@
-import { observable, persist } from '@legendapp/state';
-import { openDatabaseSync } from 'expo-sqlite';
-import type { Observable } from '@legendapp/state';
-
-const localDb = openDatabaseSync('hanzolab-local.db');
-
-const persistConfig = {
-  db: 'expo-sqlite' as const,
-};
+import { observable } from '@legendapp/state';
 
 export interface PersistedData<T> {
   data: T;
   updatedAt?: string;
 }
 
-export function createPersistedObservable<T>(initialValue: T, name: string): Observable<T> {
-  return observable(
-    persist<T>(initialValue, {
-      ...persistConfig,
-      name,
-      dataInitial: initialValue,
-    }),
-  );
+export function createPersistedObservable<T>(initialValue: T, _name: string) {
+  return observable(initialValue);
 }
 
 export const exercises$ = createPersistedObservable<any[]>([], 'exercises');

@@ -6,7 +6,7 @@ import React, {
   useCallback,
   type ReactNode,
 } from 'react';
-import { supabase } from '../client';
+import { supabase, type AppId } from '../client';
 import type { AuthState, AuthUser } from '../types';
 import type { Session } from '@supabase/supabase-js';
 

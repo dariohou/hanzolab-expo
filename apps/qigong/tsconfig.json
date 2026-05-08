@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@hanzolab/ui": ["../../packages/ui/src"],
+      "@hanzolab/timer-core": ["../../packages/timer-core/src"],
+      "@hanzolab/auth": ["../../packages/auth/src"],
+      "@hanzolab/state": ["../../packages/state/src"],
+      "@hanzolab/utils": ["../../packages/utils/src"]
+    },
+    "outDir": "./dist"
+  },
+  "include": ["app/**/*", "src/**/*", "*.ts", "*.tsx", ".expo/types/**/*.ts", ".expo/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

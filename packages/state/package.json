@@ -9,8 +9,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@legendapp/state": "@beta",
-    "@legendapp/persist": "latest",
+    "@legendapp/state": "^1.0.0",
     "expo-sqlite": "~14.0.0"
   },
   "peerDependencies": {

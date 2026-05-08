@@ -1,5 +1,4 @@
-export { observable, useObservable, useValue } from '@legendapp/state';
-export { persist } from '@legendapp/persist';
+export { observable } from '@legendapp/state';
 export {
   state$,
   exercises$,
