@@ -1,0 +1,68 @@
+_format_version: '3.0'
+
+services:
+  - name: auth
+    url: http://auth:9999
+    routes:
+      - name: auth-route
+        paths:
+          - /auth/v1
+        strip_path: true
+
+  - name: rest
+    url: http://rest:3000
+    routes:
+      - name: rest-route
+        paths:
+          - /rest/v1
+        strip_path: true
+
+  - name: storage
+    url: http://storage:5000
+    routes:
+      - name: storage-route
+        paths:
+          - /storage/v1
+        strip_path: true
+
+  - name: meta
+    url: http://meta:8080
+    routes:
+      - name: meta-route
+        paths:
+          - /meta/v1
+        strip_path: true
+
+  - name: studio
+    url: http://studio:3000
+    routes:
+      - name: studio-route
+        paths:
+          - /studio
+        strip_path: true
+
+plugins:
+  - name: cors
+    config:
+      origins:
+        - '*'
+        - 'exp://*'
+      methods:
+        - GET
+        - POST
+        - PUT
+        - PATCH
+        - DELETE
+        - OPTIONS
+      headers:
+        - Accept
+        - Accept-Encoding
+        - Authorization
+        - Content-Type
+        - Origin
+        - X-Client-Info
+        - X-Requested-With
+      exposed_headers:
+        - X-Total-Count
+      credentials: true
+      max_age: 3600

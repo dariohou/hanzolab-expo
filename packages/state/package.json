@@ -1,0 +1,24 @@
+{
+  "name": "@hanzolab/state",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "eslint src/**/*.ts*",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@legendapp/state": "@beta",
+    "@legendapp/persist": "latest",
+    "expo-sqlite": "~14.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0",
+    "react-native": "^0.76.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.5.0"
+  }
+}

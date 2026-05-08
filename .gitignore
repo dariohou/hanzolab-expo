@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native builds
+*.android.js
+*.ios.js
+
+# Turbo
+.turbo/
+
+# Misc
+.DS_Store
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+coverage/
+
+# Docs build artifacts
+docs/.vite/
+docs/node_modules/
+
+# Open source cache (should not be in repo)
+opensrc/
